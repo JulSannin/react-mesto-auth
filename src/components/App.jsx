@@ -1,4 +1,4 @@
-import React from "react";
+import { useEffect, useState } from 'react';
 import { Route, Routes, useNavigate } from "react-router-dom";
 import Header from './Header';
 import Main from './Main';
@@ -18,36 +18,39 @@ import auth from "../utils/auth";
 
 function App() {
 
-  const [isEditProfilePopupOpen, setIsEditProfilePopupOpen] = React.useState(false);
-  const [isAddPlacePopupOpen, setIsAddPlacePopupOpen] = React.useState(false);
-  const [isEditAvatarPopupOpen, setIsEditAvatarPopupOpen] = React.useState(false);
-  const [selectedCard, setSelectedCard] = React.useState(null);
+  const [isEditProfilePopupOpen, setIsEditProfilePopupOpen] = useState(false);
+  const [isAddPlacePopupOpen, setIsAddPlacePopupOpen] = useState(false);
+  const [isEditAvatarPopupOpen, setIsEditAvatarPopupOpen] = useState(false);
+  const [selectedCard, setSelectedCard] = useState(null);
 
-  const [currentUser, setCurrentUser] = React.useState({});
-  const [cards, setCards] = React.useState([]);
+  const [currentUser, setCurrentUser] = useState({});
+  const [cards, setCards] = useState([]);
 
-  const [isInfoTolltip, setIsInfoTolltip] = React.useState(false);
-  const [isAuthIn, setIsAuthIn] = React.useState(false);
-  const [headerEmail, setHeaderEmail] = React.useState('');
+  const [isInfoTolltip, setIsInfoTolltip] = useState(false);
+  const [isAuthIn, setIsAuthIn] = useState(false);
+  const [headerEmail, setHeaderEmail] = useState('');
   const navigate = useNavigate();
 
-  React.useEffect(() => {
-    api
-      .getUser()
-      .then((data) => {
-        setCurrentUser(data)
-      })
-      .catch(console.error);
-  }, []);
+  useEffect(() => {
+    if (isAuthIn) {
 
-  React.useEffect(() => {
-    api
-      .getInitialCards()
-      .then((res) => {
-        setCards([...res]);
-      })
-      .catch(console.error);
-  }, []);
+      api
+        .getUser()
+        .then((data) => {
+          setCurrentUser(data)
+        })
+        .catch(console.error);
+
+      api
+        .getInitialCards()
+        .then((res) => {
+          setCards([...res]);
+        })
+        .catch(console.error);
+
+    }
+  }
+  , [isAuthIn])
 
   function handleEditProfileClick() {
     setIsEditProfilePopupOpen(true);
@@ -173,7 +176,7 @@ function App() {
       })
   }
 
-  React.useEffect(() => {
+  useEffect(() => {
     const token = localStorage.getItem('jwt');
     if (token) {
       auth
@@ -251,7 +254,7 @@ function App() {
           onClose={closeAllPopups}
           isAuth={isAuthIn}
         />
-        <Footer 
+        <Footer
           isAuth={isAuthIn}
         />
       </div>

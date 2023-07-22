@@ -1,0 +1,28 @@
+.popup__button-closed {
+    cursor: pointer;
+    position: absolute;
+    top: -40px;
+    right: -40px;
+    padding: 0;
+    border: 0;
+    background-image: url("../../../images/closed-button.svg");
+    background-color: rgba(0, 0, 0, 0);
+    width: 32px;
+    height: 32px;
+    transition: 0.5s;
+}
+
+.popup__button-closed:hover {
+    opacity: 0.6;
+    transition: 0.25s;
+}
+
+@media screen and (min-width: 319px) and (max-width: 767px) {
+    .popup__button-closed {
+        background-image: url("../../../images/closed-button-mobile.svg");
+        width: 20px;
+        height: 20px;
+        top: -36px;
+        right: 0;
+    }
+}

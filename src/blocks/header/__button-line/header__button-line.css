@@ -1,0 +1,7 @@
+.header__button-line {
+    background-color: white;
+    width: 24px;
+    height: 3px;
+    opacity: 1;
+    transition: opacity .3s ease-in-out, top .3s ease-in-out, bottom .3s ease-in-out;
+}

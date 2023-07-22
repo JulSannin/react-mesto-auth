@@ -1,0 +1,17 @@
+.profile__info {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin: auto auto auto 0;
+    padding-left: 30px;
+    align-items: center;
+}
+
+@media screen and (min-width: 319px) and (max-width: 767px) {
+    .profile__info {
+        padding-top: 26px;
+        padding-left: 26px;
+        margin: 0 auto;
+    }
+}

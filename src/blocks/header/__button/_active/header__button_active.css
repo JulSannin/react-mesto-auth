@@ -1,0 +1,13 @@
+.header__button_active::before {
+    top: 2.75px;
+    transform: rotate(45deg);
+}
+
+.header__button_active::after {
+    bottom: 1.5px;
+    transform: rotate(-45deg);
+}
+
+.header__button_active .header__button-line {
+    opacity: 0;
+}

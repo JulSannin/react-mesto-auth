@@ -1,0 +1,9 @@
+.elements__item {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    background: #fff;
+    border-radius: 10px;
+    position: relative;
+}

@@ -1,0 +1,12 @@
+.header__container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+@media screen and (min-width: 319px) and (max-width: 767px) {
+    .header__container {
+        align-items: center;
+        flex-direction: column;
+    }
+}

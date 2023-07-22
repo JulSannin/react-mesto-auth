@@ -1,0 +1,20 @@
+.profile__avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 120px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+@media screen and (min-width: 319px) and (max-width: 767px) {
+    .profile__avatar {
+        margin: 0 auto;
+    }
+}
+
+.profile__avatar:hover .profile__avatar-edit-button {
+    opacity: 1;
+}

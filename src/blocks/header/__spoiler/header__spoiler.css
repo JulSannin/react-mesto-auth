@@ -1,0 +1,5 @@
+.header__spoiler {
+    overflow: hidden;
+    height: 0;
+    transition: height .3s ease-in-out;
+}

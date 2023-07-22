@@ -1,0 +1,17 @@
+.elements__deleted-button {
+    position: absolute;
+    cursor: pointer;
+    background-image: url("../../../images/deleted-button.svg");
+    background-color: rgba(0, 0, 0, 0);
+    padding: 0;
+    border: 0;
+    width: 18px;
+    height: 19px;
+    right: 18px;
+    top: 18px;
+}
+
+.elements__deleted-button:hover {
+    opacity: 0.6;
+    transition: 0.25s;
+}

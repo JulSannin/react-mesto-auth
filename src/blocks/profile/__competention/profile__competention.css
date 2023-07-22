@@ -1,0 +1,21 @@
+.profile__competention {
+    margin: 0;
+    color: #fff;
+    font-family: "Inter", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    max-width: 336px;
+    padding-top: 10px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+@media screen and (min-width: 319px) and (max-width: 767px) {
+    .profile__competention {
+        font-size: 14px;
+        line-height: 17px;
+    }
+}

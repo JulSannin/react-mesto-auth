@@ -1,0 +1,8 @@
+.elements__card {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    max-width: 246px;
+    padding: 21px 0 19px 21px;
+}

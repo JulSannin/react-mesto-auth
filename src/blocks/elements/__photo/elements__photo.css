@@ -1,0 +1,8 @@
+.elements__photo {
+    cursor: pointer;
+    border-start-start-radius: 10px;
+    border-start-end-radius: 10px;
+    height: 282px;
+    object-fit: cover;
+    filter: brightness(75%);
+}
